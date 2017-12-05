@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html mip>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="description" content="MIP ACCESS">
+    <meta name="keywords" content="MIP,ACCESS">
+    <link rel="stylesheet" type="text/css" href="https://mipcache.bdstatic.com/static/v1/mip.css">
+    <link rel="shortcut icon" href="https://www.mipengine.org/mipicon.ico" type="image/x-icon" />
+    <link href="https://www.mipengine.org/samples-templates/mip-access/src/css/list.css" rel="stylesheet" mip-custom>
+    <title>MIP ACCESS</title>
+</head>
+
+<body>
+    <div class="outer">
+        <header>
+            <div class="nav">
+                <a href="https://www.mipengine.org/" class="navbar-brand"></a>
+            </div>
+        </header>
+        <section class="notice">
+            <b>MIP-ACCESS能够允许发布者对页面内容进行访问权限的控制，通过内容标记和用户访问情况进行综合评价，从而决定各个模块展现策略；用户可以通过该文档中的步骤来实现MIP-ACCESS功能，本案例旨在展示ACCESS功能，具体情况如下：</b>
+            <ul>
+                <li><b>文章列表：</b>本页面提供ACCESS页面列表，可点击文章列表任意一篇文章进入查看；</li>
+                <li><b>授权信息：</b>该案例提供了1篇首次点击免费文章和3篇免费文章，首次点击免费是指在第一次访问该域名下具有ACCESS功能的页面时免费查看的功能；如果访问文章数目超过4篇时，页面中配置有ACCESS属性的模块将会隐藏，登录后方可查看全部；</li>
+                <li><b>重置ACCESS状态：</b>文章的访问状态，如哪些被访问过，最多能够访问几篇，都是通过后端数据进行存储的；重置状态点击后所有访问状态被清除，可以恢复到ACCESS初始化状态；</li>
+                <li><b>翻页：</b>该案例提供了6篇文章，可以通过页面顶部的“上一篇，下一篇”进行翻页；</li>
+                <li><b>登录/登出：</b>在免费文章查看计数到4篇后，文章只能通过登录查看全部；</li>
+            </ul>
+        </section>
+        <h4 class="list-title">以下是符合MIP-ACCESS规范的文章列表</h4>
+        <ul class="list">
+            <li>第一篇文章-<a href="./articles/0">【Client】</a></li>
+            <li>第二篇文章-<a href="./articles/1">【Client】</a></li>
+            <li>第三篇文章-<a href="./articles/2">【Client】</a></li>
+            <li>第四篇文章-<a href="./articles/3">【Client】</a></li>
+            <li>第五篇文章-<a href="./articles/4">【Client】</a></li>
+            <li>第六篇文章-<a href="./articles/5">【Client】</a></li>
+        </ul>
+    </div>
+
+    <script type="text/javascript" src="https://mipcache.bdstatic.com/static/v1/mip.js"></script>
+</body>
+</html>

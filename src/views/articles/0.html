@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html mip>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="description" content="MIP ACCESS">
+    <meta name="keywords" content="MIP,ACCESS">
+    <link rel="stylesheet" type="text/css" href="https://mipcache.bdstatic.com/static/v1/mip.css">
+    <link rel="shortcut icon" href="https://www.mipengine.org/mipicon.ico" type="image/x-icon" />
+    <link href="https://www.mipengine.org/samples-templates/mip-access/src/css/list.css" rel="stylesheet">
+    <style mip-custom></style>
+    <title>MIP ACCESS</title>
+    <script type="application/json" mip-access id="mip-access">
+    {
+        "authorization": "https://www.mipengine.org/samples-templates/mip-access/authorization?rid=READER_ID&canonical_url=CANONICAL_URL",
+        "pingback": "https://www.mipengine.org/samples-templates/mip-access/pingback?rid=READER_ID&canonical_url=CANONICAL_URL",
+        "login": {
+            "login": "https://www.mipengine.org/samples-templates/mip-access/login",
+            "logout": "https://www.mipengine.org/samples-templates/mip-access/logout"
+        },
+        "authorizationFallbackResponse": {
+            "error": true,
+            "access": true,
+            "login": false
+        },
+        "hideType": 0
+    }
+    </script>
+</head>
+
+<body>
+    <div class="outer">
+        <header>
+            <div class="nav">
+                <a href="https://www.mipengine.org/" class="navbar-brand"></a>
+                <span class="login" id="login" on="tap:mip-access.login" mip-access="NOT subscriber" mip-access-hide>登录</span>
+                <span class="logout" id="logout" on="tap:mip-access.logout" mip-access="subscriber" mip-access-hide>登出</span>
+            </div>
+            <div class="nav page">
+                <a href="1" id="next">下一篇</a>
+            </div>
+        </header>
+
+        <div class="content">
+            <section class="reset">
+                <span>这是您查看的第<%= num %>篇文章</span>
+            </section>
+
+            <section>
+                <mip-img
+                layout="responsive"
+                width="350"
+                height="263"
+                src="https://www.mipengine.org/static/img/banner2_wise_ab3d9a7.png"></mip-img>
+                <p>MIP是百度在2016年提出的移动网页加速器项目，能帮助站长和网站开发者快速搭建移动端页面，从前端渲染和页面网络传输两方面进行优化，杜绝页面渲染中的阻塞问题，提升页面展现速度。</p>
+                <mip-img
+                mip-access="access"
+                class="mobile"
+                layout="responsive"
+                width="1010"
+                height="1090"
+                src="https://www.mipengine.org/static/img/P2x1_457e18b.jpg"></mip-img>
+                <p mip-access="access">MIP具有丰富的内部组件，提供实用强大的基础组件，开发者可根据需求任意选择；开放的接入技术，它是一项永久的开源计划提供持续优化的解决方案；简单便捷的开发规则，MIP语法基于HTML并提供详细的示例开发者仅需做简单开发。</p>
+            </section>
+            <section mip-access="NOT access" mip-access-hide>
+                <div class="login-center">
+                    <span on="tap:mip-access.login">登录后查看更多</span>
+                </div>
+            </section>
+        </div>
+
+        <section class="reset">
+            <span id="dismiss">重置MIP ACCESS状态</span>
+        </section>
+    </div>
+
+    <script type="text/javascript" src="https://mipcache.bdstatic.com/static/v1/mip.js"></script>
+    <script type="text/javascript" src="https://mipcache.bdstatic.com/static/v1/mip-access/mip-access.js"></script>
+    <script type="text/javascript" src="https://www.mipengine.org/samples-templates/mip-access/src/js/mip-page/mip-page.js"></script>
+</body>
+</html>
